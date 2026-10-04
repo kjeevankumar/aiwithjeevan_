@@ -4,14 +4,15 @@ import {
   CalendarCheck, 
   ArrowRight, 
   HelpCircle, 
-  BookOpen 
+  BookOpen,
+  Globe
 } from 'lucide-react';
 import { creatorProfile } from '../data/mockData';
 import { useApp } from '../context/AppContext';
 import { ResourceCard } from '../components/features/ResourceCard';
 import { AskQuestionModal } from '../components/features/AskQuestionModal';
 import { BookingModal } from '../components/features/BookingModal';
-import { InstagramIcon } from '../components/ui/SocialIcons';
+import { InstagramIcon, YoutubeIcon } from '../components/ui/SocialIcons';
 import brandLogo from '../assets/brand/ai-with-jeevan-logo.png';
 
 export const HomePage: React.FC = () => {
@@ -78,28 +79,83 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Instagram Link Badge */}
-            <a
-              href={creatorProfile.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                padding: '0.35rem 0.85rem',
-                borderRadius: 'var(--radius-full)',
-                backgroundColor: 'rgba(225, 48, 108, 0.12)',
-                border: '1px solid rgba(225, 48, 108, 0.3)',
-                color: '#f472b6',
-                fontSize: '0.825rem',
-                fontWeight: 700,
-                textDecoration: 'none'
-              }}
-            >
-              <InstagramIcon size={15} color="#e1306c" />
-              <span>{creatorProfile.instagramHandle}</span>
-            </a>
+            {/* Social & Portfolio Links Badges */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.6rem',
+              flexWrap: 'wrap'
+            }}>
+              {/* Instagram */}
+              <a
+                href={creatorProfile.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.45rem',
+                  padding: '0.35rem 0.8rem',
+                  borderRadius: 'var(--radius-full)',
+                  backgroundColor: 'rgba(225, 48, 108, 0.12)',
+                  border: '1px solid rgba(225, 48, 108, 0.3)',
+                  color: '#f472b6',
+                  fontSize: '0.8rem',
+                  fontWeight: 700,
+                  textDecoration: 'none'
+                }}
+              >
+                <InstagramIcon size={14} color="#e1306c" />
+                <span>{creatorProfile.instagramHandle}</span>
+              </a>
+
+              {/* YouTube */}
+              <a
+                href={creatorProfile.youtubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.45rem',
+                  padding: '0.35rem 0.8rem',
+                  borderRadius: 'var(--radius-full)',
+                  backgroundColor: 'rgba(239, 68, 68, 0.12)',
+                  border: '1px solid rgba(239, 68, 68, 0.3)',
+                  color: '#fca5a5',
+                  fontSize: '0.8rem',
+                  fontWeight: 700,
+                  textDecoration: 'none'
+                }}
+              >
+                <YoutubeIcon size={14} color="#ef4444" />
+                <span>@aiwithjeevan944</span>
+              </a>
+
+              {/* Portfolio */}
+              <a
+                href={creatorProfile.githubPagesUrl || creatorProfile.portfolioUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.45rem',
+                  padding: '0.35rem 0.8rem',
+                  borderRadius: 'var(--radius-full)',
+                  backgroundColor: 'rgba(56, 189, 248, 0.12)',
+                  border: '1px solid rgba(56, 189, 248, 0.3)',
+                  color: '#38bdf8',
+                  fontSize: '0.8rem',
+                  fontWeight: 700,
+                  textDecoration: 'none'
+                }}
+              >
+                <Globe size={13} color="#38bdf8" />
+                <span>Personal Portfolio</span>
+              </a>
+            </div>
 
             {/* Introduction */}
             <p style={{

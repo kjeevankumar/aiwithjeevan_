@@ -63,6 +63,8 @@ export interface CreatorProfile {
   instagramUrl: string;
   youtubeUrl: string;
   githubUrl: string;
+  portfolioUrl?: string;
+  githubPagesUrl?: string;
   linkedinUrl: string;
   telegramUrl: string;
   email: string;

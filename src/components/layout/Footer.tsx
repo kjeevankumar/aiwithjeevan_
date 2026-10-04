@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Globe } from 'lucide-react';
 import { creatorProfile } from '../../data/mockData';
 import { InstagramIcon, YoutubeIcon, GithubIcon, LinkedinIcon } from '../ui/SocialIcons';
 import brandLogo from '../../assets/brand/ai-with-jeevan-logo.png';
@@ -108,6 +108,27 @@ export const Footer: React.FC = () => {
               </a>
 
               <a
+                href={creatorProfile.githubPagesUrl || creatorProfile.portfolioUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Personal Portfolio"
+                title="Personal Portfolio"
+                style={{
+                  width: '2.2rem',
+                  height: '2.2rem',
+                  borderRadius: 'var(--radius-md)',
+                  backgroundColor: 'var(--bg-surface-elevated)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  border: '1px solid var(--border-subtle)',
+                  color: '#38bdf8'
+                }}
+              >
+                <Globe size={17} />
+              </a>
+
+              <a
                 href={creatorProfile.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -188,6 +209,18 @@ export const Footer: React.FC = () => {
               <li>
                 <a href={creatorProfile.instagramUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
                   <span>Instagram @aiwithjeevan_</span>
+                  <ArrowUpRight size={14} />
+                </a>
+              </li>
+              <li>
+                <a href={creatorProfile.youtubeUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+                  <span>YouTube @aiwithjeevan944</span>
+                  <ArrowUpRight size={14} />
+                </a>
+              </li>
+              <li>
+                <a href={creatorProfile.githubPagesUrl || creatorProfile.portfolioUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+                  <span>Portfolio (kjeevankumar.g1)</span>
                   <ArrowUpRight size={14} />
                 </a>
               </li>

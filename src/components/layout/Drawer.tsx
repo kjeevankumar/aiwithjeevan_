@@ -9,7 +9,8 @@ import {
   CalendarCheck, 
   User, 
   Compass, 
-  Sparkles 
+  Sparkles,
+  Globe 
 } from 'lucide-react';
 import { creatorProfile } from '../../data/mockData';
 import { InstagramIcon, YoutubeIcon, GithubIcon } from '../ui/SocialIcons';
@@ -200,6 +201,15 @@ export const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
               title="GitHub"
             >
               <GithubIcon size={20} color="#fff" />
+            </a>
+            <a 
+              href={creatorProfile.githubPagesUrl || creatorProfile.portfolioUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ color: '#38bdf8' }}
+              title="Personal Portfolio"
+            >
+              <Globe size={20} color="#38bdf8" />
             </a>
           </div>
         </div>

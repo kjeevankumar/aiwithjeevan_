@@ -4,7 +4,8 @@ import {
   Code2, 
   Award, 
   Terminal, 
-  ArrowUpRight 
+  ArrowUpRight,
+  Globe
 } from 'lucide-react';
 import { creatorProfile } from '../data/mockData';
 import { YoutubeIcon, GithubIcon } from '../components/ui/SocialIcons';
@@ -252,6 +253,36 @@ export const AboutPage: React.FC = () => {
               <ArrowUpRight size={18} color="#f472b6" />
             </a>
 
+            {/* Personal Portfolio */}
+            <a
+              href={creatorProfile.githubPagesUrl || creatorProfile.portfolioUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="interactive-card"
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', textDecoration: 'none' }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+                <div style={{
+                  width: '2.8rem',
+                  height: '2.8rem',
+                  borderRadius: 'var(--radius-md)',
+                  backgroundColor: 'rgba(56, 189, 248, 0.15)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0
+                }}>
+                  <Globe size={22} color="#38bdf8" />
+                </div>
+                <div>
+                  <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#fff' }}>Personal Portfolio</div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--primary)' }}>kjeevankumar.g1</div>
+                </div>
+              </div>
+              <ArrowUpRight size={18} color="#38bdf8" />
+            </a>
+
+            {/* YouTube */}
             <a
               href={creatorProfile.youtubeUrl}
               target="_blank"
@@ -273,11 +304,11 @@ export const AboutPage: React.FC = () => {
                   <YoutubeIcon size={22} color="#ef4444" />
                 </div>
                 <div>
-                  <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#fff' }}>YouTube</div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>AI Deep Dives &amp; Tutorials</div>
+                  <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#fff' }}>YouTube Channel</div>
+                  <div style={{ fontSize: '0.75rem', color: '#fca5a5' }}>@aiwithjeevan944</div>
                 </div>
               </div>
-              <ArrowUpRight size={18} color="var(--text-muted)" />
+              <ArrowUpRight size={18} color="#ef4444" />
             </a>
 
             <a

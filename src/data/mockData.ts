@@ -11,8 +11,10 @@ export const creatorProfile: CreatorProfile = {
   headline: 'Making complex concepts simple.',
   instagramHandle: '@aiwithjeevan_',
   instagramUrl: 'https://instagram.com/aiwithjeevan_',
-  youtubeUrl: 'https://youtube.com/@aiwithjeevan_',
-  githubUrl: 'https://github.com/aiwithjeevan',
+  youtubeUrl: 'https://www.youtube.com/@aiwithjeevan944',
+  githubUrl: 'https://github.com/kjeevankumar',
+  githubPagesUrl: 'https://kjeevankumar.github.io/kjeevankumar.g1/',
+  portfolioUrl: 'http://g1gititalizing.me/kjeevankumar.g1/',
   linkedinUrl: 'https://linkedin.com/in/aiwithjeevan',
   telegramUrl: 'https://t.me/aiwithjeevan',
   email: 'connect@aiwithjeevan.com',
@@ -20,6 +22,24 @@ export const creatorProfile: CreatorProfile = {
 };
 
 export const initialResourcesData: ResourceItem[] = [
+  {
+    id: 'res-portfolio',
+    title: "Jeevan's Personal Portfolio",
+    url: 'https://kjeevankumar.github.io/kjeevankumar.g1/',
+    description: 'My official developer & engineering portfolio website (kjeevankumar.g1).',
+    category: 'Portfolio',
+    createdAt: '2026-10-04T12:30:00Z',
+    published: true
+  },
+  {
+    id: 'res-youtube',
+    title: 'AI with Jeevan — YouTube Channel',
+    url: 'https://www.youtube.com/@aiwithjeevan944',
+    description: 'In-depth AI, Machine Learning, Python tutorials and project builds.',
+    category: 'YouTube',
+    createdAt: '2026-10-04T12:00:00Z',
+    published: true
+  },
   {
     id: 'res-1',
     title: '90-Day AI/ML Roadmap',
